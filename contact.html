@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kioom Digital - Let's discuss your next digital platform or marketing project.">
+    <title>Contact | Kioom Digital</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Kioom<span>.</span>Digital</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content container">
+            <h1>Get in Touch</h1>
+            <p>Ready to start your project? Have a question about our platforms? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container contact-container">
+            <form class="contact-form" id="contactForm" action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your company (optional)">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="platform-development">Platform Development</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="brand-design">Brand & Design</option>
+                            <option value="growth-strategy">Growth Strategy</option>
+                            <option value="operations">Platform Operations</option>
+                            <option value="consulting">Product Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your project, question, or idea..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Send Message</button>
+                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted);">* Required fields. We typically respond within 24 hours.</p>
+            </form>
+
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+                <h3 style="margin-bottom: var(--spacing-sm);">Other Ways to Reach Us</h3>
+                <p style="margin-bottom: var(--spacing-sm);">
+                    <strong>Email:</strong> <a href="mailto:hello@kioomdigital.com">hello@kioomdigital.com</a>
+                </p>
+                <p style="margin-bottom: var(--spacing-sm);">
+                    <strong>Business Inquiries:</strong> partnerships@kioomdigital.com
+                </p>
+                <p style="margin-bottom: 0;">
+                    <strong>ABN:</strong> Available upon request (Sole Trader registration)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p>Kioom Digital — Building the platforms of tomorrow.</p>
+            <p class="copyright">&copy; 2025 Kioom Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simple form handling (client-side only for now)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            // Simulate form submission (replace with actual backend later)
+            setTimeout(() => {
+                alert('Thank you for your message! We will reply within 24 hours.');
+                this.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
