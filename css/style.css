@@ -348,10 +348,6 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.service-icon {
-    display: none; /* Remove all icons */
-}
-
 .service-card h3 {
     margin-bottom: var(--spacing-sm);
     font-size: 1.25rem;
