@@ -349,9 +349,7 @@ section {
 }
 
 .service-icon {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-accent);
+    display: none; /* Remove all icons */
 }
 
 .service-card h3 {
