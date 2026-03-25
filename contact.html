@@ -39,7 +39,7 @@
     <!-- Contact Section -->
     <section class="contact">
         <div class="container contact-container">
-            <form class="contact-form" id="contactForm" action="#" method="POST">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mzdkplpo" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Your Name *</label>
@@ -107,22 +107,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        // Simple form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                alert('Thank you for reaching out. We will be in touch within 24 hours.');
-                this.reset();
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
